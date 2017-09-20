@@ -1,0 +1,259 @@
+@font-face {
+  font-family: dragonscript;
+  src: url('fonts/dragon_alphabet.ttf');
+}
+
+@font-face {
+  font-family: stylish;
+  src: url('fonts/Adine Kirnberg.ttf');
+}
+
+@font-face {
+  font-family: kanji;
+  src: url('fonts/nagayama_kai08.otf');
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  height: 100%;
+}
+
+.my-name {
+  font-size: 3rem;
+}
+
+.intro-wrapper {
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+.intro-background {
+  z-index: -1;
+  background: url('img/intro.jpg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+.intro-img-wrapper {
+  margin-right: 1rem;
+}
+
+.intro-img {
+  border-radius: 50%;
+  border: 5px solid #fff;
+  height: 15rem;
+  max-height: 100%;
+}
+
+.intro-heading-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.intro-heading {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 5rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  overflow: hidden;
+  /*-webkit-animation: animateHeading 12s linear infinite 0s;
+  -ms-animation: animateHeading 12s linear infinite 0s;*/
+  animation: animateHeading 11s linear infinite 1s;
+  /*text-transform: uppercase;*/
+}
+
+.intro-heading-wrapper .intro-heading:nth-child(1) {
+  -webkit-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.intro-heading-wrapper .intro-heading:nth-child(2) {
+  -webkit-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+  font-family: kanji;
+}
+
+.intro-heading-wrapper .intro-heading:nth-child(3) {
+  -webkit-animation-delay: 8s;
+  -ms-animation-delay: 8s;
+  animation-delay: 8s;
+  font-family: stylish;
+}
+
+.intro-heading-wrapper .intro-heading:nth-child(4) {
+  -webkit-animation-delay: 10s;
+  -ms-animation-delay: 10s;
+  animation-delay: 10s;
+  font-family: dragonscript;
+}
+
+@-webkit-keyframes animateHeading {
+  0% { opacity: 0; }
+  2% { opacity: 0; -webkit-transform: translateY(-30px); }
+  5% { opacity: 1; -webkit-transform: translateY(0px);}
+  17% { opacity: 1; -webkit-transform: translateY(0px); }
+  20% { opacity: 0; -webkit-transform: translateY(30px); }
+  80% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.intro-details {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.intro-content {
+  z-index: 1;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.intro-summary {
+  text-align: justify;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid;
+}
+
+.skills-wrapper, .contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.skills, .projects, .contact-me {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.skill-card {
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  transition: 0.3s;
+  width: 200px;
+  text-align: justify;
+  background-color: #fff;
+}
+
+.skill-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.skill-card img {
+  min-height: 200px;
+  width: 100%;
+  text-align: justify;
+  border-radius: 5px 5px 0 0;
+}
+
+h4 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.project-card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 grey;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 16px 0 grey;
+}
+
+.project-card h4 {
+  margin: 0;
+}
+
+.project-card a {
+  color: #fff;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.github-link {
+  text-align: center;
+}
+
+.github-link a,
+.social-network a {
+  text-decoration: none;
+  color: #000;
+}
+
+.github-link .fa,
+.social-network .fa {
+  font-size: 50px;
+}
+
+.github-link a:hover {
+  text-decoration: underline;
+}
+
+.contact-me h3 {
+  text-align: center;
+}
+#project1 {
+  background-color: #c26ceb;
+}
+
+#project2 {
+  background-color: #6edb17;
+}
+
+#project3 {
+  background-color: #ed2638;
+}
+
+#project4 {
+  background-color: #ccbf18;
+}
+
+#project5 {
+  background-color: #4226ed;
+}
